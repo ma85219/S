@@ -1,0 +1,68 @@
+<!Doctype html>
+<html>
+<head>
+</head>
+<body>
+	<canvas id="mycanvas"></canvas>
+<script>
+	var canvas=document.getElementById("mycanvas");
+		ctx=canvas.getContext("2d");
+		
+		canvas.width=canvas.height=800;
+		
+		
+		
+		ctx.beginPath();
+		ctx.arc(50,80,25,0,Math.PI*2);
+		ctx.arc(150,80,25,0,Math.PI*2);
+		ctx.fillStyle="blue";
+		ctx.fill();
+		
+		ctx.beginPath();
+		ctx.arc(50,80,10,0,Math.PI*2);
+		ctx.arc(150,80,10,0,Math.PI*2);
+		ctx.fillStyle="black";
+		ctx.fill();
+		
+		
+		ctx.beginPath();
+		ctx.moveTo(100,75);
+		ctx.lineTo(75,125);
+		ctx.lineTo(125,125);
+		ctx.fillStyle="red";
+		ctx.fill();
+		
+		
+		ctx.beginPath();
+		ctx.scale(1,0.5);
+		ctx.arc(100,350,75,0,2*Math.PI);		
+		ctx.closePath();
+		ctx.strokeStyle="green";
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.arc(50,70,25,0,Math.PI,true);		
+		ctx.strokeStyle="black";
+		ctx.stroke();
+		
+		ctx.beginPath();
+		ctx.arc(150,70,25,0,Math.PI,true);
+		ctx.strokeStyle="black";
+		ctx.stroke();
+		
+		ctx.beginPath();		
+		ctx.arc(100,350,75,0,Math.PI);
+		ctx.closePath();
+		ctx.fillStyle="red";
+		ctx.fill();
+		
+		ctx.beginPath();
+		ctx.moveTo(25,90);
+		ctx.lineTo(35,125);
+		ctx.strokeStyle="black";
+		ctx.stroke();
+		
+		
+	</script>
+	</body>
+	</html>
