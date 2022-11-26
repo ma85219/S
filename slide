@@ -1,0 +1,88 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<meta charset="utf-8"/>
+		<title>Simple Slide Show</title>
+		<script>
+		var loopTimer,timeID,fading,comeIN;
+		var interval_ms=5000;
+		var current_picture_number=0;
+		var picture_files=["Worcester1.jpg","w2.png","W3.jpg","Worcester-Cathedral.jpg"];
+		var alt_text=["Worcester Street people shopping. Tudor buildings. Cobbled Street","Bridge over the river Severn. Three arches. Reflections. Cathedral in background","Worcester quay side at night. Reflections of lights in river","Worcester cathedral inside view towards altar. Aches, pews and vaulted roof can be seen"];
+		var captions=["People shopping","Bridge over Severn","Riverside at night","Inside cathedral"];
+		function change_picture(pic_number){
+			var picture=document.getElementById("pic");
+			picture.src= picture_files[pic_number];
+			var here=document.getElementById("pic");
+			here.alt=alt_text[pic_number];
+			var figcap=document.getElementById("capt");
+			figcap.innerHTML = captions[pic_number];
+		}
+		function move_on(){
+			current_picture_number++;
+			if(current_picture_number==picture_files.length){
+				current_picture_number=0;
+			}
+			change_picture(current_picture_number)
+		}
+		function move_back(){
+			current_picture_number--;
+			if(current_picture_number<0){
+				current_picture_number=picture_files.length-1;
+			}
+			change_picture(current_picture_number)
+		}
+		function auto(){
+			loopTimer=setInterval(move_on,interval_ms)
+		}
+		function stop_auto(){
+			clearInterval(loopTimer)
+		}
+		function speed(spd){
+			timeID=setInterval(move_on,spd)
+		}
+		function fade(){
+			var picture=document.getElementById("pic");
+			var op=picture.style.opacity;
+			picture.style.opacity=op-0.1;
+		}
+		function fadeOut(){
+			fading=setInterval(fade,1000);
+		}
+		function fadeIN(){
+			document.getElementById("pic").style.opacity=0;
+			var picture=document.getElementById("pic");
+			var op=picture.style.opacity;
+			picture.style.opacity=op+0.1;
+		}
+		function showUp(){
+			comeIN=setInterval(fadeIN,1000);
+		}
+		</script>
+	</head>
+	<body>
+		<p>
+		
+		
+		</p>
+		<figure>
+			<img id="pic" src="C:\Users\ma852\Desktop\Worcester1.jpg" alt="Worcester Street people shopping" style="width:500px;opacity:1"/>
+			<figcaption id="capt">Worcester</figcaption>
+		</figure>
+		
+		<button onclick="change_picture(0)">Picture 0</button>
+		<button onclick="change_picture(1)">Picture 1</button>
+		<button onclick="change_picture(2)">Picture 2</button>
+		<button onclick="change_picture(3)">Picture 3</button>
+		<button onclick="move_on()">Next >></button>
+		<button onclick="move_back()">&raquo;Previous</button>
+		<button onclick="auto()">Slide Show</button>
+		<button onclick="stop_auto()">Stop Show</button>
+		<button onclick="speed(10000)">Slow</button>
+		<button onclick="speed(5000)">Medium</button>
+		<button onclick="speed(1000)">Fast</button>
+		<button onclick="fade()">Fade</button>
+		<button onclick="fadeOut()">Fade out</button>
+		<button onclick="showUp()">Fade in</button>
+	</body>
+</html>
