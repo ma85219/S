@@ -1,0 +1,84 @@
+<!Doctype html>
+<html lang="en">
+	<head>
+		<title>Steptoe Butte</title>
+		<style>
+		a{
+			text-decoration:none;
+			font-weight:bold;
+		}
+		img{
+			margin-right:12px;
+			margin-bottom:6px;
+			border:1px solid #000;
+		}
+		.mainimg{
+			float:left;
+		}
+		#hide_e{
+			display:none;
+		}
+		#elevation{
+			display:none;
+		}
+		#hide_p{
+			display:none;
+		}
+		#photos{
+			display:none;
+		}
+		#show_e{
+			display:block;
+		}
+		#show_p{
+			display:block;
+		}
+		.fakelink{
+			cursor:pointer;
+			text-decoration:none;
+			font-weight:bold;
+			color:#E03A3E;
+		}
+		section{
+			margin-bottom:6px;
+		}
+		
+	</style>
+	</head>
+	<body>
+		<header>
+			<h1>Steptoe Butte</h1>
+		</header>
+		
+		<section>
+			<p><img src="C:\Users\ma852\Desktop\bus.jpg" alt="bus" class="mainimg"/>
+			Steptoe Butte is a quartzite island jutting out of the silty loess of the <a href="http://en.wikipedia.org/wiki/Palouse">Paluse</a>hills in whiteman County, Washington. The rock that forms the butte is over 400 million years old, in contrast with the 16-7 million year old<a href="http://en.wikipedia.org/wiki/Columbia_River">Columbia River</a>basalts that underlie the rest of the Palouse (such islands of ancient rock have come to be called buttes, a butte being defined as a small hill with a flat top, whose width at top does not exceed its height)</p>
+			<p>A hotel built by Cashup Davis stood atop Steptoe Butte from Virgil McCroskey donated 120 acres of land to form arecs. Steptoe Btte os currently recognized as a National Natural Landmark because of its unique geological value.It is named in honor of <a href="http://en.wikipedia.org/wiki/Colonel_Edward_Steptoe">Colonel Edward Steptoe</a>.</p>
+		</section>
+		
+		<section>
+			<div class="fakelink" id="show_e" onclick="this.style.display='none';document.getElementById('hide_e').style.display='block';document.getElementById('elevation').style.display='inline';">&raquo;Show Elevation</div>
+			<div class="fakelink" id="hide_e" onclick="this.style.display='none';document.getElementById('show_e').style.display='block';document.getElementById('elevation').style.display='none';">&raquo;Hide Elevation</div>
+			
+			<div id="elevation">3,612feet,approximately 1000 feet above the surrounding countryside.</div>
+		</section>
+		
+		<section>
+			<div class="fakelink" id="show_p" onclick="this.style.display='none';document.getElementById('hide_p').style.display='block';document.getElementById('photos').style.display='inline';">&raquo;Show Photos from the Top of Steptoe Butte</div>
+			
+			<div class="fakelink" id="hide_p" onclick="this.style.display='none';document.getElementById('show_p').style.display='block';document.getElementById('photos').style.display='none';">&raquo;Hide Photos from the Top of Steptoe Butte</div>
+			
+			<div id="photos"><img src="C:\Users\ma852\Desktop\walk.jpg" alt="walk"/><img src="C:\Users\ma852\Desktop\palaceDay.jpg" alt="day"/><img src="C:\Users\ma852\Desktop\presentpier.jpg" alt="pier"/></div>
+		</section>
+		
+		
+		
+		<footer>
+			<em>Text from<a href="http://en.wikipedia.org/wiki/Steptoe_butte">Wikipedia</a>,photos by the author.</em>
+		</footer>
+		
+				
+		
+	</body>
+</html>
+		
